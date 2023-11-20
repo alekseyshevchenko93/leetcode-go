@@ -7,9 +7,9 @@ import (
 )
 
 func TestProblem(t *testing.T) {
-	require.Equal(t, groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}), [][]string{
+	require.Equal(t, [][]string{
+		[]string{"eat", "tea", "ate"},
+		[]string{"tan", "nat"},
 		[]string{"bat"},
-		[]string{"nat", "tan"},
-		[]string{"ate", "eat", "tea"},
-	})
+	}, groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
 }
