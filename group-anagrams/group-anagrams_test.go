@@ -8,8 +8,8 @@ import (
 
 func TestProblem(t *testing.T) {
 	require.Equal(t, [][]string{
-		[]string{"eat", "tea", "ate"},
-		[]string{"tan", "nat"},
-		[]string{"bat"},
+		{"eat", "tea", "ate"},
+		{"tan", "nat"},
+		{"bat"},
 	}, groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
 }
