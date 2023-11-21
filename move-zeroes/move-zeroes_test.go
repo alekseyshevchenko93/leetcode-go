@@ -8,8 +8,8 @@ import (
 
 func TestProblem(t *testing.T) {
 	tt := []struct {
-		input []int
-		outpt []int
+		input  []int
+		output []int
 	}{
 		{
 			[]int{0, 1, 0, 3, 12},
@@ -39,6 +39,6 @@ func TestProblem(t *testing.T) {
 
 	for _, v := range tt {
 		moveZeroes(v.input)
-		require.Equal(t, v.outpt, v.input)
+		require.Equal(t, v.output, v.input)
 	}
 }
