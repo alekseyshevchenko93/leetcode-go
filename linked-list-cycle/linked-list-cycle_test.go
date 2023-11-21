@@ -27,5 +27,5 @@ func TestProblem2(t *testing.T) {
 	node2.Next = &node3
 	node3.Next = &node1
 
-	require.True(t, hasCycle(&node1))
+	require.True(t, hasCycle2(&node1))
 }

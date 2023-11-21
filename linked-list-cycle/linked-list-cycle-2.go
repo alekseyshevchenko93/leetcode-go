@@ -12,7 +12,7 @@ func hasCycle2(head *ListNode) bool {
 	p1 := head
 	p2 := head
 
-	for p1 != nil || p1.Next != nil {
+	for p1 != nil && p1.Next != nil {
 		p1 = p1.Next.Next
 		p2 = p2.Next
 
