@@ -13,9 +13,5 @@ func moveZeroes(nums []int) {
 
 			s++
 		}
-
-		if v == 0 {
-			continue
-		}
 	}
 }
