@@ -5,32 +5,38 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func checkIfExists(head *ListNode, val int) bool {
+func allElementAreUnique(head *ListNode) bool {
 	if head == nil {
-		return false
+		return true
 	}
 
+	m := make(map[int]struct{})
+
 	for head != nil {
-		if head.Val == val {
-			return true
+		_, found := m[head.Val]
+
+		if found {
+			return false
 		}
+
+		m[head.Val] = struct{}{}
 
 		head = head.Next
 	}
 
-	return false
+	return true
 }
 
-func removeElements(head *ListNode, val int) *ListNode {
+func deleteDuplicates(head *ListNode) *ListNode {
 	if head == nil {
 		return head
 	}
 
-	dummy := &ListNode{}
+	dummy := &ListNode{Val: -101}
 	dummyHead := dummy
 
 	for head != nil {
-		if head.Val != val {
+		if dummy.Val != head.Val {
 			dummy.Next = head
 			dummy = head
 		}
