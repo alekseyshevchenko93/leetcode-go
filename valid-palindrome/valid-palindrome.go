@@ -6,7 +6,7 @@ import (
 )
 
 func isPalindrome(s string) bool {
-	re := regexp.MustCompile(`[^a-zA-Z0-9]`)
+	re := regexp.MustCompile(`[^a-z0-9]`)
 	rs := re.ReplaceAll([]byte(strings.ToLower(s)), []byte(""))
 
 	l := 0
