@@ -43,7 +43,5 @@ func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
 	s1 := strings.Join(dfs1, ",")
 	s2 := strings.Join(dfs2, ",")
 
-	fmt.Println(s1, s2)
-
 	return strings.Contains(s1, s2)
 }
